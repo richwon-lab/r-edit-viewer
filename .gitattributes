@@ -7,3 +7,8 @@ pubspec.yaml text eol=lf
 *.ps1 text eol=lf
 .gitignore text eol=lf
 .gitattributes text eol=lf
+
+# 격리 Windows 브리지 소스도 checkout에서 LF를 유지한다.
+*.cpp text eol=lf
+*.h text eol=lf
+CMakeLists.txt text eol=lf

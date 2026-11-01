@@ -1,0 +1,10 @@
+# 실험은 별도 의존성 해결·분석을 수행한다. 공개 viewer API는 루트 strict 기준을 따른다.
+include: package:flutter_lints/flutter.yaml
+analyzer:
+  language:
+    strict-casts: true
+    strict-inference: true
+    strict-raw-types: true
+  exclude:
+    - build/**
+    - windows/**

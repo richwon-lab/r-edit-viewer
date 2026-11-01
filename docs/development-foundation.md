@@ -59,7 +59,7 @@ IntelliJ Flutter SDK는 이 저장소 .fvm/flutter_sdk, Dart SDK는 그 아래 b
   문서만 바뀌면 링크/용어를 검사한다. 향후 실제 example/네이티브 연결은 그 변경에 맞춰 실행/플랫폼 검사를 추가한다.
 - 실제 검사·합성 사례·과거 실험·미실행을 구분한다. API/렌더링·외곽 측정·제작 가능성을 구현 완료처럼 쓰지 않는다.
 
-현재 생성 도구·생성 소스·CI·example 앱은 없다. 생성/Windows 앱 실행을 수행했다고 기록하지 않는다.
+초기 기반 시점에는 생성 도구·생성 소스·CI·example 앱이 없었다. 아래 초기 실행 기록은 당시 사실이다.
 배포 라이선스는 미정이며 자동 생성된 LICENSE 자리표시자는 삭제했다. 새 라이선스를 임의로 선택하지 않았다.
 
 ## 초기 기반의 실제 확인 (2026-11-01)
@@ -72,3 +72,14 @@ IntelliJ Flutter SDK는 이 저장소 .fvm/flutter_sdk, Dart SDK는 그 아래 b
 - dart format lib tool과 tool/verify.dart의 재포맷 검사·flutter analyze --fatal-infos 성공(No issues found).
 - 테스트 없음. flutter test/생성/AOT/Windows 실행/렌더링·외곽 측정은 수행하지 않았다.
 - 기본 샘플 참조·문서 링크·pubspec ASCII/UTF-8/LF·Git 제외/줄바꿈·PowerShell 구문·기존 스테이징과 형제 Git 상태를 확인했다. 실제 프로젝트 Git 디렉터리는 루트 .git 하나이며, 형제 Git 상태는 변경되지 않았다.
+
+## 격리 윤곽 실험 (2026-11-02)
+
+최신 사용자 요청으로 example/에 독립 Windows 실행을 만들었다.
+[실험 실행·의존성](../example/README.md)과 [실제 결과/한계](outline-experiment.md)를 따른다.
+루트 운영 API/의존성/SDK는 유지한다. example은 Flutter 없는 AOT 계산 부분과 Flutter 표시 부분을 구분한다.
+별도 pubspec/lock·flutter_lints와 strict 타입3종을 사용하고 자체 분석/책임별 테스트/Windows profile 검사를 실행한다.
+루트 분석은 example/**를 제외한다. 종속 패키지의 pub get 여부가 루트 분석 결과를 바꾸지 않게 하며,
+example의 검증을 루트 verify가 대신 수행했다고 보고하지 않는다.
+추가한 .cpp/.h/CMakeLists.txt도 LF 관리하며 font·build·측정 원본은 Git 제외다.
+정식 패키지 채택은 의존성·라이선스·정확성/성능 자료 검토 뒤 결정한다.

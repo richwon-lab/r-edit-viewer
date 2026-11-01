@@ -14,3 +14,11 @@
 - 테스트는 책임·조건·기대 결과가 드러나게 작성한다. 테스트가 없으면 없다고 보고하며 가짜 구현/통과용 테스트는 금지한다.
 - 완료 전 ./tool/fvm.ps1 dart tool/verify.dart를 실행한다. 실제 기능이 생기면 관련 단독 테스트·example 실행을 추가한다. 문서만 바뀌면 링크·용어를 확인한다. 미실행·합성·과거 결과를 실제 검증과 구분한다.
 - README/관련 계약/next-step을 실제 상태에 맞춘다. 기존 작업·스테이징을 보존하며 요청 없이 commit/push/stage하거나 이력을 바꾸지 않는다.
+
+## 윤곽 격리 실험
+
+- 최신 사용자 요청으로 example/에 독립 Windows 실행 실험을 둔다. 별도 Git/plugin/정식 viewer API를 만들지 않는다.
+- [실험 계약·관찰 결과](docs/outline-experiment.md)와 [실행 방법](example/README.md)을 따른다.
+- 루트 표준 verify와 example의 자체 pub get·format·strict 분석·테스트·Windows profile 실행을 구분한다.
+- 로컬 font/윤곽 원본/측정 산출물은 Git에 넣지 않는다. root 의존성·형제 프로젝트를 실험 때문에 바꾸지 않는다.
+- UI/raster/CPU/GPU 측정과 합성 workload·실제 font·미지원 범위를 구분한다. 성능 때문에 원래 윤곽/경계를 보정하지 않는다.

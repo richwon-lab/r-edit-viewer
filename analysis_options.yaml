@@ -10,6 +10,8 @@ analyzer:
     - .tooling/**
     - build/**
     - doc/api/**
+    # example은 자체 pubspec/분석/검증을 갖는 격리 실험이다.
+    - example/**
 
 linter:
   rules:

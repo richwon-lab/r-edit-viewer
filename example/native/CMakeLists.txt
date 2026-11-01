@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.14)
+project(outline_probe_native LANGUAGES CXX)
+add_library(outline_probe_native SHARED probe.cpp)
+target_compile_features(outline_probe_native PRIVATE cxx_std_17)
+target_compile_definitions(outline_probe_native PRIVATE UNICODE _UNICODE NOMINMAX)
+target_link_libraries(outline_probe_native PRIVATE dwrite)
+target_compile_options(outline_probe_native PRIVATE /utf-8)
