@@ -25,4 +25,4 @@ Flutter 3.47.7 / Dart 3.13.5, FVM 4.3.2를 사용한다. 최초 SDK 준비는 �
 현재 runtime 의존성은 Flutter SDK뿐이며 workflow 의존성이나 네이티브 plugin은 없다.
 발행은 `publish_to: none`으로 막았다. 배포 라이선스는 미정이며 생성기의 LICENSE 자리표시자는 제거했다.
 
-다음 작업은 **viewer 표시 입력과 공통 글꼴 외곽 측정의 연결 계약 설계**다.
+[글자 표시·공통 외곽 연결 계약](docs/text-outline-binding.md)의 추천안을 작성했다. 다음은 계약 검토 후 동일 glyph 배치·윤곽의 끝까지 전달을 확인하는 최소 실험이다. 표시 API는 아직 없다.
