@@ -1,0 +1,9 @@
+# 선언과 직접 작성한 소스/도구는 checkout에서도 LF로 유지한다.
+pubspec.yaml text eol=lf
+.fvmrc text eol=lf
+*.dart text eol=lf
+*.yaml text eol=lf
+*.md text eol=lf
+*.ps1 text eol=lf
+.gitignore text eol=lf
+.gitattributes text eol=lf

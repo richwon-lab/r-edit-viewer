@@ -1,0 +1,19 @@
+# 라이브러리 해결 결과와 캐시/빌드는 각 개발 환경에서 준비한다.
+/pubspec.lock
+.dart_tool/
+.flutter-plugins-dependencies
+/build/
+/coverage/
+/doc/api/
+.fvm/
+.tooling/
+
+# 로컬 IDE와 공동 개발 override는 등록하지 않는다.
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+pubspec_overrides.yaml
+*.log
+.DS_Store

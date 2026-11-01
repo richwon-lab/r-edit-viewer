@@ -1,0 +1,19 @@
+include: package:very_good_analysis/analysis_options.11.0.0.yaml
+
+analyzer:
+  language:
+    strict-casts: true
+    strict-inference: true
+    strict-raw-types: true
+  exclude:
+    - .fvm/**
+    - .tooling/**
+    - build/**
+    - doc/api/**
+
+linter:
+  rules:
+    # 공개 API는 의미·단위·불변식·실패 조건을 한국어 중심으로 설명한다.
+    public_member_api_docs: true
+    # 한국어 설명의 자연스러운 줄 길이를 허용한다.
+    lines_longer_than_80_chars: false

@@ -1,0 +1,16 @@
+name: r_edit_viewer
+description: 'Flutter library for displaying R-edit drawings and text with viewport interactions.'
+version: 0.1.0
+publish_to: none
+repository: https://github.com/richwon-lab/r-edit-viewer
+
+environment:
+  sdk: ^3.13.5
+  flutter: '>=3.47.7'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  very_good_analysis: 11.0.0
